@@ -1,0 +1,117 @@
+{
+    "manifestVersion": 1,
+    "id": "PublishHTMLReports",
+    "version": "1.1.38",
+    "name": "PublishHTMLReports",
+    "description": "An extension which lets you publish and visualize HTML reports(Like Jmeter load test reports) in Azure Devops as a seperate tab. ",
+    "publisher": "LakshayKaushik",
+    "public": false,
+    "repository": {
+        "type": "git",
+        "uri": "https://github.com/lakshaykaushik/PublishHTMLReport"
+    },
+    "screenshots": [
+        {
+            "path": "images/Sample6.png"
+        }
+    ],
+    "content": {
+        "details": {
+            "path": "overview.md"
+        }
+    },
+    "icons": {
+        "default": "images/Sample4.png"
+    },    
+    "tags": [
+        "Build",
+        "Jmeter",
+        "Build Pipeline",
+        "HTML",
+        "HTML Reports"
+    ],
+     "scopes": [
+        "vso.build_execute"
+    ],
+    "categories": [
+        "Azure Pipelines"
+    ],   
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],
+    "files": [
+        {
+            "path": "images",
+            "addressable": true          
+        },
+        {
+            "path": "dist",
+            "addressable": true,
+            "packagePath": "scripts"
+        },
+        {
+            "path": "sbadmin2-1.0.7",
+            "addressable": true
+        },
+        {
+            "path": "index.html",
+            "addressable": true
+        },
+        {
+            "path": "OverTime.html",
+            "addressable": true
+        },
+        {
+            "path": "Throughput.html",
+            "addressable": true
+        },
+        {
+            "path": "ResponseTimes.html",
+            "addressable": true
+        },
+        {
+            "path": "publishhtmlreport",
+            "addressable": true
+        },
+        {
+            "path": "content/css",
+            "addressable": true
+        },
+        {
+            "path": "jquery.tablesorter.min.js",
+            "addressable": true
+        },                
+        {
+            "path": "node_modules/vss-web-extension-sdk/lib",
+            "addressable": true,
+            "packagePath": "lib"
+        }        
+    ],
+    "contributions": [
+        {
+            "id": "build-info-tab",
+            "type": "ms.vss-build-web.build-results-tab",
+            "description": "A tab contributing to build results view",
+            "targets": [
+                "ms.vss-build-web.build-results-view"
+            ],
+            "properties": {
+                "name": "Published HTML",
+                "uri": "index.html",
+                "supportsTasks": ["99e8d79d-febd-4f2e-b2df-da8f8257b59a"]
+            }
+        },
+        {
+            "id": "publishhtmlreport",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "publishhtmlreport"
+            }
+        }
+    ]
+}

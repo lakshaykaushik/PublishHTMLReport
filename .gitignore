@@ -1,0 +1,11 @@
+node_modules/
+publishhtmlreport/**/node_modules/
+
+sbadmin2-1.0.7/
+content/
+
+dist/tab.js
+
+publishhtmlreport/index.js
+
+*.vsix
