@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "module": "amd",
+        "moduleResolution": "node",
+        "target": "es2015",
+        "skipLibCheck": true,
+        "outDir": "dist/",
+        "types": [
+            "vss-web-extension-sdk",
+            "jquery"
+        ]
+    },
+    "files": [
+        "src/enhancer/tab.ts"
+    ]
+}
