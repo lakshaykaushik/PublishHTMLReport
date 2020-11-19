@@ -43,6 +43,7 @@ export class InfoTab extends Controls.BaseControl {
 									
 									//s.type = "text/javascript";
 									document.getElementById("firstscript").appendChild(s)
+								
 								});
 								
 								
@@ -63,11 +64,12 @@ export class InfoTab extends Controls.BaseControl {
 									   return str;
 								   }
 								   var second = arrayBufferToString(attachementContent);
-								   
+								   setTimeout(function() {
 									var s = document.createElement("script");
 									s.innerHTML = second;
 									s.async = false;
-                                    document.getElementById("secondscript").appendChild(s)
+									document.getElementById("secondscript").appendChild(s)
+								}, 1000);
 							   
 							});
 							   

@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <head>
+    <script>
+        window.onload = function() {setTimeout(function(){document.body.style.opacity="100";},500);};
+    </script>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -42,7 +45,10 @@
         
         VSS.ready(function() {
             require(["enhancer/tab"], function () { });
-        });   
+        });
+
+       
+
     </script>
     
     <style>
@@ -54,6 +60,7 @@
 </head>
 
 <body>
+    <style> body {opacity:0;}</style>
     <div id="wrapper">
         <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
             <div class="navbar-header">
