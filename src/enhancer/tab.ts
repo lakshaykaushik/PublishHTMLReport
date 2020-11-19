@@ -234,6 +234,32 @@ export class InfoTab extends Controls.BaseControl {
 							}
 						});
 					});
+					taskClient.getPlanAttachments(vsoContext.project.id, "build", build.orchestrationPlan.planId, "replacedhtml").then((taskAttachments)=> {
+						$.each(taskAttachments, (index, taskAttachment) => {
+							if (taskAttachment._links && taskAttachment._links.self && taskAttachment._links.self.href) {
+
+							   var recId = taskAttachment.recordId;
+							   var timelineId = taskAttachment.timelineId;
+							   
+							   taskClient.getAttachmentContent(vsoContext.project.id, "build", build.orchestrationPlan.planId,timelineId,recId,"replacedhtml",taskAttachment.name).then((attachementContent)=> {
+								function arrayBufferToString(buffer){
+									var newstring = '';
+									var arr = new Uint8Array(buffer);
+									var len = arr.byteLength;
+									for (var i = 0; i < len; i++) {
+									 newstring += String.fromCharCode( arr[ i ] );
+								 }
+									//var str = String.fromCharCode.apply(String, arr);
+									return newstring;
+								}
+								   var newhtml = arrayBufferToString(attachementContent);
+								   document.getElementById("wrapper").innerHTML = newhtml
+										   
+							});
+							   
+							}
+						});
+					});
 					taskClient.getPlanAttachments(vsoContext.project.id, "build", build.orchestrationPlan.planId, "eleventhscriptname").then((taskAttachments)=> {
 						$.each(taskAttachments, (index, taskAttachment) => {
 							if (taskAttachment._links && taskAttachment._links.self && taskAttachment._links.self.href) {

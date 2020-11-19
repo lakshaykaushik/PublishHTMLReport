@@ -7,8 +7,10 @@ async function run() {
             tl.setResult(tl.TaskResult.Failed, 'Bad input was given');
             return;
         }
+        
+
+        if (inputString == 'Jmeter') {
         const jmeterPath: string | undefined = tl.getInput('JmeterReportsPath', false);
-        process.chdir(jmeterPath!);
         console.log('##vso[task.addattachment type=firstscriptname;name=content;]' + jmeterPath! + '/content/js/' + 'dashboard-commons.js');
         console.log('##vso[task.addattachment type=secondscriptname;name=content;]' + jmeterPath! + '/content/js/' + 'dashboard.js');
         console.log('##vso[task.addattachment type=thirdscriptname;name=content;]' + jmeterPath! + '/content/js/' + 'jquery.tablesorter.min.js');
@@ -21,6 +23,11 @@ async function run() {
         console.log('##vso[task.addattachment type=eleventhscriptname;name=content;]' + jmeterPath! + '/content/js/' + 'jquery.cookie.js');
 
     }
+    if (inputString == 'genericHTML'){
+        const newhtmlPath: string | undefined = tl.getInput('htmlPath', false);
+        console.log('##vso[task.addattachment type=replacedhtml;name=content;]' + newhtmlPath!);
+    }
+}
     catch (err) {
         tl.setResult(tl.TaskResult.Failed, err.message);
     }

@@ -1,5 +1,5 @@
 # Publish HTML Reports
-This extension can be used to publish Jmeter HTML reports as a seperate tab(Parallel to Summary tab) on Azure Devops. Right now full support of Jmeter report has been developed, however this extension can also be extended to publish other simple HTML documents or complex HTML reports as well. 
+This extension can be used to publish Jmeter HTML reports as a seperate tab(Parallel to Summary tab) on Azure Devops. Right now full support of Jmeter report and any generic html report has been developed, however this extension can also be extended to publish other simple HTML documents or complex HTML reports as well. 
 
 
 ## Usage:
@@ -24,3 +24,12 @@ This produces result files and folders having detailed jmeter report of the run.
 ```
 
 This will make the Jmeter report compatible to be viewed and analysed within azure devops.
+
+If you want to publish a simple HTML document to AZDO in a seperate tab then do the following:
+
+```
+- task: publishhtmlreport@1
+  inputs:
+    htmlType: 'genericHTML'
+    htmlPath: '$(Build.SourcesDirectory)/Sample.html'
+```
