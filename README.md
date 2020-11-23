@@ -88,11 +88,11 @@ git clone https://github.com/lakshaykaushik/PublishHTMLReport.git
 
 ```
 
-### Specify version of Jmeter in bootstrap.sh, run.sh and Dockerfile. Then run bootstrap.sh 
+### 2. Specify version of Jmeter in bootstrap.sh, run.sh and Dockerfile. Then run bootstrap.sh 
 
 Running this script will bootstrap your local repo and include essential files needed to build the extension.
 
-### Now increment the build version in task.json and vss-extension.json. 
+### 3. Now increment the build version in task.json and vss-extension.json. 
 
 ```
 "manifestVersion": 1,
@@ -116,7 +116,7 @@ Running this script will bootstrap your local repo and include essential files n
 ```
         
 
-### Generate vsix file.
+### 4. Generate vsix file.
 
 Run publishhtmlreport/tsc and npm run build, this will generate vsix file which can be uploaded to the marketplace.
 
