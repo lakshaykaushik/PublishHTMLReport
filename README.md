@@ -41,6 +41,10 @@ If you want to publish a simple HTML document to AZDO in a seperate tab then do 
     htmlPath: '$(Build.SourcesDirectory)/Sample.html'
 ```
 
+This is how Jmeter reports look within azdo after using this extension:
+
+![Alt text](images/Sample.png?raw=true "Dashboard")
+
 ## Customizing the extension
 
 As the extension currently supports Jmeter report and generic HTML reports (single page), it makes sense to customize the extension to support multiple other type of HTML reports like Locust, Robot etc. This type of customization can be done by making a contribution to the extension. 
