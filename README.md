@@ -118,7 +118,7 @@ Running this script will bootstrap your local repo and include essential files n
 
 ### 4. Generate vsix file.
 
-Run publishhtmlreport/tsc and npm run build, this will generate vsix file which can be uploaded to the marketplace.
+Run ```publishhtmlreport/tsc``` and ```npm run build```, this will generate vsix file which can be uploaded to the marketplace.
 
 ## Contributing to the extension
 
