@@ -41,7 +41,7 @@ If you want to publish a simple HTML document to AZDO in a seperate tab then do 
     htmlPath: '$(Build.SourcesDirectory)/Sample.html'
 ```
 
-This is how Jmeter reports look within azdo after using this extension:
+## This is how Jmeter reports look within azdo after using this extension:
 
 ![Alt text](images/Sample1.png?raw=true "Dashboard")
 ![Alt text](images/Sample2.png?raw=true "Graph")
