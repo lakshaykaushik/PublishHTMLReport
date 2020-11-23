@@ -43,11 +43,11 @@ If you want to publish a simple HTML document to AZDO in a seperate tab then do 
 
 ## This is how Jmeter reports look within azdo after using this extension:
 
-![Alt text](images/Sample1.png?raw=true "Dashboard")
+![Alt text](images/Sample4.png?raw=true "Dashboard")
 
 
 
-![Alt text](images/Sample3.png?raw=true "Graph")
+![Alt text](images/Sample5.png?raw=true "Graph")
 
 ## Customizing the extension
 
