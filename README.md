@@ -76,6 +76,50 @@ And when the above 3 files are changed, custom implementation type can be mentio
 ```
 Relevant files can be html, css or js files which can be appended in the html page using appendChild() or similar implementation. 
 
+## Build Process of the extension.
+
+Before building the extension, you need to have docker engine installed on your local machine or if you are doing a build in a CI pipeline, docker engine needs to be installed on the pipeline agent too. 
+
+Steps to build:
+
+### 1. Take a git clone of this repo:
+```
+git clone https://github.com/lakshaykaushik/PublishHTMLReport.git
+
+```
+
+### Specify version of Jmeter in bootstrap.sh, run.sh and Dockerfile. Then run bootstrap.sh 
+
+Running this script will bootstrap your local repo and include essential files needed to build the extension.
+
+### Now increment the build version in task.json and vss-extension.json. 
+
+```
+"manifestVersion": 1,
+    "id": "PublishHTMLReports",
+    "version": "1.1.33",
+    "name": "PublishHTMLReports",
+    "description": "An extension which lets you publish and visualize HTML reports in Azure Devops as a seperate tab",
+    "publisher": "LakshayKaushik",
+```
+```
+ "name": "publishhtmlreport",
+    "friendlyName": "publishhtmlreport",
+    "description": "This task can be used to publish html reports to azdo. Currently Jmeter HTML reports are being transformed to be consumed into Azdo directly",
+    "helpMarkDown": "",
+    "category": "Utility",
+    "author": "LakshayKaushik",
+    "version": {
+        "Major": 1,
+        "Minor": 1,
+        "Patch": 25
+```
+        
+
+### Generate vsix file.
+
+Run publishhtmlreport/tsc and npm run build, this will generate vsix file which can be uploaded to the marketplace.
+
 ## Contributing to the extension
 
 This project welcomes contributions and suggestions. Most contributions require you to agree to a Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us the rights to use your contribution. For details, visit Microsoft Contributor License Agreement.
