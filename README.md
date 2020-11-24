@@ -3,9 +3,9 @@ This extension can be used in Azure devops to publish Jmeter HTML reports as a s
 
 This extension has been tested with the following Jmeter versions:
 
-1. 4.0
-2. 5.0
-3. 5.3
+* 4.0
+* 5.0
+* 5.3
 
 The file structure of Jmeter reports in version 4 and 5 hasn't changed, so it is expected that this extension will work for all 4.* and 5.* versions of jmeter.
 
