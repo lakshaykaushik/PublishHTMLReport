@@ -14,3 +14,6 @@ RUN  tar -xvf /opt/apache-jmeter-${VERSION}.tar
 
 
 ENTRYPOINT ["/run.sh"]
+
+
+Apple
