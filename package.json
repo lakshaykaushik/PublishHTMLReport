@@ -1,6 +1,6 @@
 {
-  "name": "build-results-enhancer",
-  "version": "1.0.0",
+  "name": "publishhtmlreport",
+  "version": "1.0.35",
   "description": "A simple extension that demonstrates how to extend build summary page.",
   "scripts": {
     "build": "tsc -p .",
