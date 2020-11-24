@@ -26,7 +26,8 @@ docker cp jmeter:/LoadReports .
 docker rm -f jmeter
 
 cp -r LoadReports/sbadmin2-1.0.7 .
-cp -r LoadReports/content/css content
+mkdir -p content
+cp -r LoadReports/content/css content/css
 
 rm -rf LoadReports
 # Remove some unsupported fonts by azdo
