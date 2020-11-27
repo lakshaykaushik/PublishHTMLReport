@@ -255,6 +255,7 @@ export class InfoTab extends Controls.BaseControl {
 									return newstring;
 								}
 								   var newhtml = arrayBufferToString(attachementContent);
+								   document.body.style.overflow = "visible";
 								   document.getElementById("wrapper").innerHTML = newhtml
 										   
 							});
