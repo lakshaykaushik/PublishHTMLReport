@@ -90,11 +90,12 @@ export class InfoTab extends Controls.BaseControl {
 									   return str;
 								   }
 								   var fourth = arrayBufferToString(attachementContent);
-								   
+								   setTimeout(function() {
 									var s = document.createElement("script");
 									s.innerHTML = fourth;
 									s.async = false;
-                                    document.getElementById("fourthscript").appendChild(s)
+									document.getElementById("fourthscript").appendChild(s)
+								}, 1000);
 							   
 							});
 							   
@@ -115,11 +116,12 @@ export class InfoTab extends Controls.BaseControl {
 									   return str;
 								   }
 								   var fifth = arrayBufferToString(attachementContent);
-								   
+								   setTimeout(function() {
 									var s = document.createElement("script");
 									s.innerHTML = fifth;
 									s.async = false;
-                                    document.getElementById("fifthscript").appendChild(s)
+									document.getElementById("fifthscript").appendChild(s)
+								}, 1000);
 							   
 							});
 							   
@@ -140,12 +142,12 @@ export class InfoTab extends Controls.BaseControl {
 									   return str;
 								   }
 								   var sixth = arrayBufferToString(attachementContent);
-								   
+								   setTimeout(function() {
 									var s = document.createElement("script");
 									s.innerHTML = sixth;
 									s.async = false;
                                     document.getElementById("sixthscript").appendChild(s)
-							   
+								}, 1000);
 							});
 							   
 							}
@@ -165,12 +167,12 @@ export class InfoTab extends Controls.BaseControl {
 									   return str;
 								   }
 								   var seventh = arrayBufferToString(attachementContent);
-								   
+								   setTimeout(function() {
 									var s = document.createElement("script");
 									s.innerHTML = seventh;
 									s.async = false;
                                     document.getElementById("seventhscript").appendChild(s)
-							   
+								}, 1000);
 							});
 							   
 							}
@@ -195,12 +197,12 @@ export class InfoTab extends Controls.BaseControl {
 									   return newstring;
 								   }
 								   var ninth = arrayBufferToString(attachementContent);
-								   
+								   setTimeout(function() {
 									var s = document.createElement("script");
 									s.innerHTML = ninth;
 									s.async = false;
                                     document.getElementById("ninthscript").appendChild(s)
-							   
+								}, 1000);
 							});
 							   
 							}
@@ -225,12 +227,42 @@ export class InfoTab extends Controls.BaseControl {
 									return newstring;
 								}
 								   var tenth = arrayBufferToString(attachementContent);
-								   
+								   setTimeout(function() {
 									var s = document.createElement("script");
 									s.innerHTML = tenth;
 									s.async = false;
                                     document.getElementById("tenthscript").appendChild(s)
+								}, 1000);
+							});
 							   
+							}
+						});
+					});
+					taskClient.getPlanAttachments(vsoContext.project.id, "build", build.orchestrationPlan.planId, "twefthscriptname").then((taskAttachments)=> {
+						$.each(taskAttachments, (index, taskAttachment) => {
+							if (taskAttachment._links && taskAttachment._links.self && taskAttachment._links.self.href) {
+
+							   var recId = taskAttachment.recordId;
+							   var timelineId = taskAttachment.timelineId;
+							   
+							   taskClient.getAttachmentContent(vsoContext.project.id, "build", build.orchestrationPlan.planId,timelineId,recId,"twefthscriptname",taskAttachment.name).then((attachementContent)=> {
+								function arrayBufferToString(buffer){
+									var newstring = '';
+									var arr = new Uint8Array(buffer);
+									var len = arr.byteLength;
+									for (var i = 0; i < len; i++) {
+									 newstring += String.fromCharCode( arr[ i ] );
+								 }
+									//var str = String.fromCharCode.apply(String, arr);
+									return newstring;
+								}
+								   var tenth = arrayBufferToString(attachementContent);
+								   setTimeout(function() {
+									var s = document.createElement("script");
+									s.innerHTML = tenth;
+									s.async = false;
+                                    document.getElementById("twefthscriptname").appendChild(s)
+								}, 1000);
 							});
 							   
 							}
@@ -255,6 +287,7 @@ export class InfoTab extends Controls.BaseControl {
 									return newstring;
 								}
 								   var newhtml = arrayBufferToString(attachementContent);
+								   document.body.style.overflow = "visible";
 								   document.getElementById("wrapper").innerHTML = newhtml
 										   
 							});
@@ -276,12 +309,12 @@ export class InfoTab extends Controls.BaseControl {
 									   return str;
 								   }
 								   var eleventh = arrayBufferToString(attachementContent);
-								   
+								   setTimeout(function() {
 									var s = document.createElement("script");
 									s.innerHTML = eleventh;
 									s.async = false;
                                     document.getElementById("eleventhscript").appendChild(s)
-							   
+								}, 1000);
 							});
 							   
 							}

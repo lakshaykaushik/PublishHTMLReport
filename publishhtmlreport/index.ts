@@ -21,6 +21,7 @@ async function run() {
         console.log('##vso[task.addattachment type=ninthscriptname;name=content;]' + jmeterPath! + '/content/js/' + 'graph.js');
         console.log('##vso[task.addattachment type=tenthscriptname;name=content;]' + jmeterPath! + '/content/js/' + 'jquery-ui.min.js');
         console.log('##vso[task.addattachment type=eleventhscriptname;name=content;]' + jmeterPath! + '/content/js/' + 'jquery.cookie.js');
+        console.log('##vso[task.addattachment type=twefthscriptname;name=content;]' + jmeterPath! + '/content/js/' + 'customGraph.js');
 
     }
     if (inputString == 'genericHTML'){
