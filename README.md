@@ -127,3 +127,7 @@ Run ```publishhtmlreport/tsc``` and ```npm run build```, this will generate vsix
 ## Contributing to the extension
 
 This project welcomes contributions and suggestions. 
+
+## Communication
+
+I am active on gitter for this extension, message me here, if you need some kind of support for this extension: https://gitter.im/PublishHTMLReports/community?utm_source=share-link&utm_medium=link&utm_campaign=share-link
