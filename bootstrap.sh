@@ -28,6 +28,7 @@ docker rm -f jmeter
 cp -r LoadReports/sbadmin2-1.0.7 .
 mkdir -p content
 cp -r LoadReports/content/css content/css
+cp LoadReports/content/js/jquery.tablesorter.min.js .
 
 rm -rf LoadReports
 # Remove some unsupported fonts by azdo
