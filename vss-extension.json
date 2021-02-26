@@ -20,7 +20,7 @@
             "path": "overview.md"
         },
         "license": {
-            "path": "eula.md"
+            "path": "LICENSE"
         }
     },
     "icons": {
