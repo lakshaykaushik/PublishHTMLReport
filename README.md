@@ -1,5 +1,5 @@
 # Azure Devops Extension- PublishHTMLReports
-This extension can be used in Azure devops to publish Jmeter HTML reports as a seperate tab(Parallel to Summary tab). Right now full support of Jmeter report and any generic html report has been developed, however this extension can also be extended to publish other complex HTML reports as well.
+This extension can be used in Azure devops to publish Jmeter HTML reports as a seperate tab(Parallel to Summary tab) in Build Pipelines(Please note Release Pipelines is not supported). Right now full support of Jmeter report and any generic html report has been developed, however this extension can also be extended to publish other complex HTML reports as well.
 
 This extension has been tested with the following Jmeter versions:
 
