@@ -32,8 +32,9 @@ cp LoadReports/content/js/jquery.tablesorter.min.js .
 
 rm -rf LoadReports
 # Remove some unsupported fonts by azdo
-rm -rf sbadmin2-1.0.7/bower_components/bootstrap/dist/fonts/
-rm -rf sbadmin2-1.0.7/bower_components/font-awesome/fonts
+#   Delete the svg only
+rm -rf sbadmin2-1.0.7/bower_components/bootstrap/dist/fonts/*.svg
+rm -rf sbadmin2-1.0.7/bower_components/font-awesome/fonts/*.svg
 
 
 # Run npm install
