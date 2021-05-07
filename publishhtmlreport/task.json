@@ -1,16 +1,16 @@
 {
     "$schema": "https://raw.githubusercontent.com/Microsoft/azure-pipelines-task-lib/master/tasks.schema.json",
-    "id": "99e8d79d-febd-4f2e-b2df-da8f8257b59a",
+    "id": "ef25b7d4-3211-4397-8af0-15bdae65ba24",
     "name": "publishhtmlreport",
     "friendlyName": "publishhtmlreport",
     "description": "This task can be used to publish html reports to azdo. Currently Jmeter HTML reports are being transformed to be consumed into Azdo directly",
     "helpMarkDown": "",
     "category": "Utility",
-    "author": "LakshayKaushik",
+    "author": "DaxSorbito",
     "version": {
         "Major": 1,
-        "Minor": 1,
-        "Patch": 48
+        "Minor": 2,
+        "Patch": 174
     },
     "instanceNameFormat": "publishhtmlreport",
     "inputs": [
@@ -36,7 +36,7 @@
             "label": "JmeterReportsPath",
             "defaultValue": "",
             "required": false,
-            "helpMarkDown": "Path where Jmeter report containing - content folder, index.html, statistics.json etc are present"
+            "helpMarkDown": "Path where Jmeter report containing - content folder, index.html, statistics.json etc are present. Could be comma delimeted path for multiple reports."
         }
     ],
     "execution": {

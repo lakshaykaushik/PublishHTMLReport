@@ -32,7 +32,7 @@ cp LoadReports/content/js/jquery.tablesorter.min.js .
 
 rm -rf LoadReports
 # Remove some unsupported fonts by azdo
-#   Delete the svg only
+#   Delete the svg only so that it would render font-awsome properly
 rm -rf sbadmin2-1.0.7/bower_components/bootstrap/dist/fonts/*.svg
 rm -rf sbadmin2-1.0.7/bower_components/font-awesome/fonts/*.svg
 

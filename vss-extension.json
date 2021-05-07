@@ -1,14 +1,14 @@
 {
     "manifestVersion": 1,
     "id": "PublishHTMLReports",
-    "version": "1.1.50",
+    "version": "1.2.174",
     "name": "PublishHTMLReports",
     "description": "An extension which lets you publish and visualize HTML reports(Like Jmeter load test reports) in Azure Devops as a seperate tab. ",
-    "publisher": "LakshayKaushik",
-    "public": true,
+    "publisher": "DaxSorbito",
+    "public": false,
     "repository": {
         "type": "git",
-        "uri": "https://github.com/lakshaykaushik/PublishHTMLReport"
+        "uri": "https://github.com/daxsorbito/PublishHTMLReport"
     },
     "screenshots": [
         {
@@ -107,7 +107,7 @@
             "properties": {
                 "name": "Published HTML",
                 "uri": "index.html",
-                "supportsTasks": ["99e8d79d-febd-4f2e-b2df-da8f8257b59a"]
+                "supportsTasks": ["ef25b7d4-3211-4397-8af0-15bdae65ba24"]
             }
         },
         {

@@ -1,7 +1,8 @@
 <!DOCTYPE html>
+
 <head>
     <script>
-        window.onload = function() {setTimeout(function(){document.body.style.opacity="100";},500);};
+        window.onload = function () { setTimeout(function () { document.body.style.opacity = "100"; }, 500); };
     </script>
 
     <meta charset="utf-8">
@@ -12,7 +13,7 @@
 
     <title>Apache JMeter Dashboard</title>
 
-     <!-- Bootstrap Core CSS -->
+    <!-- Bootstrap Core CSS -->
     <link href="sbadmin2-1.0.7/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- MetisMenu CSS -->
@@ -34,33 +35,48 @@
     <link href="sbadmin2-1.0.7/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
     <script src="lib/VSS.SDK.min.js"></script>
-    
+
     <script type="text/javascript">
-        VSS.init( { 
-            usePlatformScripts: true, 
-            moduleLoaderConfig: { 
-                paths: { "enhancer": "scripts" } 
-            } 
+        VSS.init({
+            usePlatformScripts: true,
+            moduleLoaderConfig: {
+                paths: { "enhancer": "scripts" }
+            }
         });
-        
-        VSS.ready(function() {
+
+        VSS.ready(function () {
             require(["enhancer/tab"], function () { });
         });
 
-       
+
 
     </script>
-    
+
     <style>
-    .build-info {
-        padding: 10px;
-    }     
+        .build-info {
+            padding: 10px;
+        }
     </style>
-    
+
 </head>
 
 <body>
-    <style> body {opacity:0;}</style>
+    <style>
+        body {
+            opacity: 0;
+            overflow: visible;
+        }
+
+        .navbar-brand select {
+            border: 0px;
+            color: rgb(0, 90, 158);
+        }
+
+        .navbar-brand label {
+            color: rgb(0, 90, 158);
+            font-weight: 400;
+        }
+    </style>
     <div id="wrapper">
         <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
             <div class="navbar-header">
@@ -70,7 +86,11 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Apache JMeter Dashboard</a>
+                <div class="navbar-brand">
+                    <a href="index.html">Apache JMeter Dashboard</a>
+                    <label for="jmxfiles">for</label>
+                    <select name="jmxfiles" id="jmxfiles"></select>
+                </div>
             </div>
             <div class="navbar-default sidebar" role="navigation">
                 <div class="sidebar-nav navbar-collapse">
@@ -93,9 +113,10 @@
                             </ul>
                             <!-- /.nav-second-level -->
                         </li>
-                        
+
                         <li>
-                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Customs Graphs<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Customs Graphs<span
+                                    class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
                                     <a href="CustomsGraphs.html">Over Time</a>
@@ -111,7 +132,8 @@
                 <div class="col-lg-6">
                     <div class="panel panel-default" style="text-align:center;">
                         <div class="panel-heading">
-                           <p class="dashboard-title"><a href="https://en.wikipedia.org/wiki/Apdex" target="_blank">APDEX (Application Performance Index)</a></p>
+                            <p class="dashboard-title"><a href="https://en.wikipedia.org/wiki/Apdex"
+                                    target="_blank">APDEX (Application Performance Index)</a></p>
                         </div>
                         <div class="panel-body">
                             <section id="apdex" class="col-md-12 table-responsive">
@@ -121,14 +143,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6" >
+                <div class="col-lg-6">
                     <div class="panel panel-default" style="text-align:center;">
                         <div class="panel-heading">
-                           <p class="dashboard-title">Requests Summary</p>
+                            <p class="dashboard-title">Requests Summary</p>
                         </div>
-                           <div class="panel-body">
+                        <div class="panel-body">
                             <div class="flot-chart" style="height:200px;">
-                                <div class="flot-chart-content" id="flot-requests-summary" style="height:200px;"/>
+                                <div class="flot-chart-content" id="flot-requests-summary" style="height:200px;" />
                             </div>
                         </div>
                     </div>
@@ -136,70 +158,67 @@
             </div>
             <div class="col-lg-12">
                 <div class="panel panel-default" style="text-align:center;">
-                       <div class="panel-heading" >
-                           <p class="dashboard-title">Statistics</p>
-                       </div>
-                <div class="panel-body ">
-                    <section class="col-md-12 table-responsive">
-                        <table id="statisticsTable" class="table table-bordered table-condensed tablesorter " >
-                        </table>
-                    </section>
-                </div>
-            </div>
-            <div class="col-lg-12">
-                <div class="panel panel-default" style="text-align:center;">
                     <div class="panel-heading">
-                        <p class="dashboard-title">Errors</p>
+                        <p class="dashboard-title">Statistics</p>
                     </div>
-                    <div class="panel-body">
+                    <div class="panel-body ">
                         <section class="col-md-12 table-responsive">
-                            <table id="errorsTable" class="table table-bordered table-condensed tablesorter ">
+                            <table id="statisticsTable" class="table table-bordered table-condensed tablesorter ">
                             </table>
                         </section>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-12">
-                <div class="panel panel-default" style="text-align:center;">
-                    <div class="panel-heading">
-                        <p class="dashboard-title">Top 5 Errors by sampler</p>
+                <div class="col-lg-12">
+                    <div class="panel panel-default" style="text-align:center;">
+                        <div class="panel-heading">
+                            <p class="dashboard-title">Errors</p>
+                        </div>
+                        <div class="panel-body">
+                            <section class="col-md-12 table-responsive">
+                                <table id="errorsTable" class="table table-bordered table-condensed tablesorter ">
+                                </table>
+                            </section>
+                        </div>
                     </div>
-                    <div class="panel-body">
-                        <section class="col-md-12 table-responsive">
-                            <table id="top5ErrorsBySamplerTable" class="table table-bordered table-condensed tablesorter ">
-                            </table>
-                        </section>
+                </div>
+                <div class="col-lg-12">
+                    <div class="panel panel-default" style="text-align:center;">
+                        <div class="panel-heading">
+                            <p class="dashboard-title">Top 5 Errors by sampler</p>
+                        </div>
+                        <div class="panel-body">
+                            <section class="col-md-12 table-responsive">
+                                <table id="top5ErrorsBySamplerTable"
+                                    class="table table-bordered table-condensed tablesorter ">
+                                </table>
+                            </section>
+                        </div>
                     </div>
                 </div>
             </div>
+
+
+            <!-- jQuery -->
+            <script src="sbadmin2-1.0.7/bower_components/jquery/dist/jquery.min.js"></script>
+
+
+            <!-- Bootstrap Core JavaScript -->
+            <script src="sbadmin2-1.0.7/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+            <script src="sbadmin2-1.0.7/bower_components/flot/excanvas.min.js"></script>
+            <script src="sbadmin2-1.0.7/bower_components/flot/jquery.flot.js"></script>
+            <script src="sbadmin2-1.0.7/bower_components/flot/jquery.flot.pie.js"></script>
+            <script src="sbadmin2-1.0.7/bower_components/flot/jquery.flot.resize.js"></script>
+            <script src="sbadmin2-1.0.7/bower_components/flot/jquery.flot.time.js"></script>
+            <script src="sbadmin2-1.0.7/bower_components/flot.tooltip/js/jquery.flot.tooltip.min.js"></script>
+            <script src="sbadmin2-1.0.7/bower_components/flot-axislabels/jquery.flot.axislabels.js"></script>
+            <!-- Metis Menu Plugin JavaScript -->
+            <script src="sbadmin2-1.0.7/bower_components/metisMenu/dist/metisMenu.min.js"></script>
+            <script src="sbadmin2-1.0.7/dist/js/sb-admin-2.js"></script>
+            <script type="text/javascript" src="jquery.tablesorter.min.js"></script>
         </div>
-    
 
-    <!-- jQuery -->
-    <script src="sbadmin2-1.0.7/bower_components/jquery/dist/jquery.min.js"></script>
-    
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="sbadmin2-1.0.7/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="sbadmin2-1.0.7/bower_components/flot/excanvas.min.js"></script>
-    <script src="sbadmin2-1.0.7/bower_components/flot/jquery.flot.js"></script>
-    <script src="sbadmin2-1.0.7/bower_components/flot/jquery.flot.pie.js"></script>
-    <script src="sbadmin2-1.0.7/bower_components/flot/jquery.flot.resize.js"></script>
-    <script src="sbadmin2-1.0.7/bower_components/flot/jquery.flot.time.js"></script>
-    <script src="sbadmin2-1.0.7/bower_components/flot.tooltip/js/jquery.flot.tooltip.min.js"></script>
-    <script src="sbadmin2-1.0.7/bower_components/flot-axislabels/jquery.flot.axislabels.js"></script>
-    <!-- Metis Menu Plugin JavaScript -->
-    <script src="sbadmin2-1.0.7/bower_components/metisMenu/dist/metisMenu.min.js"></script>
-    <script src="sbadmin2-1.0.7/dist/js/sb-admin-2.js"></script>
-    <script type="text/javascript" src="jquery.tablesorter.min.js"></script>
-</div>
-
-    
-    <div id="firstscript"></div>
-    <div id="secondscript"></div>
-
-    
-
-    
+        <div id="pub_customGraph"></div>
+        <div id="pub_dashboard-commons"></div> 
+        <div id="pub_utils" defer></div>
 </body>
 </html>

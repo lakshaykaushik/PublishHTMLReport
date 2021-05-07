@@ -9,3 +9,8 @@ dist/tab.js
 publishhtmlreport/index.js
 
 *.vsix
+
+publishhtmlreport/.DS_Store
+.DS_Store
+
+*.env
