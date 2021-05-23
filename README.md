@@ -30,6 +30,14 @@ This produces result files and folders having detailed jmeter report of the run.
     JmeterReportsPath: '$(Build.SourcesDirectory)/LoadReports'
 ```
 
+#### 3.1 Comma separated paths for multiple Jmeter files 
+```
+- task: publishhtmlreport@1
+  inputs:
+    htmlType: 'Jmeter'
+    JmeterReportsPath: '$(Build.SourcesDirectory)/File1/LoadReports,$(Build.SourcesDirectory)/File2/LoadReports'
+```
+
 This will make the Jmeter report compatible to be viewed and analysed within azure devops.
 
 If you want to publish a simple HTML document to AZDO in a seperate tab then do the following:
@@ -43,7 +51,7 @@ If you want to publish a simple HTML document to AZDO in a seperate tab then do 
 
 ## This is how Jmeter reports look within azdo after using this extension:
 
-![Alt text](images/Sample7.png?raw=true "Dashboard")
+![Alt text](images/Sample8.png?raw=true "Dashboard")
 
 ## Customizing the extension
 
@@ -124,7 +132,8 @@ Running this script will bootstrap your local repo and include essential files n
 
 Run ```publishhtmlreport/tsc``` and ```npm run build```, this will generate vsix file which can be uploaded to the marketplace.
 
-## Contributing to the extension
+### Note: 
+Alternatively, follow the [AutoPackageAndPublish.md](./AutoPackageAndPublish.md) that would automatically bump the version, package the extenstion then publish it.
 
 This project welcomes contributions and suggestions. 
 
