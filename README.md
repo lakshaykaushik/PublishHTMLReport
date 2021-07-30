@@ -144,3 +144,12 @@ This project welcomes contributions and suggestions.
 I am active on gitter for this extension, message me here, if you need some kind of support for this extension: https://gitter.im/PublishHTMLReports/community?utm_source=share-link&utm_medium=link&utm_campaign=share-link
 
 
+# Microsoft Open Source Code of Conduct
+
+This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
+
+Resources:
+
+- [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/)
+- [Microsoft Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/)
+- Contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with questions or concerns
