@@ -135,13 +135,7 @@ Run ```publishhtmlreport/tsc``` and ```npm run build```, this will generate vsix
 ### Note: 
 Alternatively, follow the [AutoPackageAndPublish.md](./AutoPackageAndPublish.md) that would automatically bump the version, package the extenstion then publish it.
 
-This project welcomes contributions and suggestions. 
-
-## Communication
-
-[![Gitter](https://badges.gitter.im/PublishHTMLReports/community.svg)](https://gitter.im/PublishHTMLReports/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
-
-I am active on gitter for this extension, message me here, if you need some kind of support for this extension: https://gitter.im/PublishHTMLReports/community?utm_source=share-link&utm_medium=link&utm_campaign=share-link
+This project welcomes contributions and suggestions, see more information on contributing in CONTRIBUTING.md
 
 
 # Microsoft Open Source Code of Conduct
